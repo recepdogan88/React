@@ -3,7 +3,7 @@ import {Card} from "react-bootstrap";
 import ChildrenNumber from './ChildrenNumber';
 
 export default function ChildrenCards(props){
-  console.log(props)
+  
     return (
           <Card className='col-3 ms-4 mt-3' style={{ width: '15rem',height:"20rem" }}>
               <Card.Img variant="top" src={props.picture} style={{ height: '8rem' }}/>

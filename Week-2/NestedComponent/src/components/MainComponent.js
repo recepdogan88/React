@@ -2,8 +2,10 @@ import CardsPerson from './CardsPerson';
 import ChildrenCards from './ChildrenCards';
 import Friends from "./Friends"
 import ChildrenNumber from './ChildrenNumber';
+import FriendNumber from './FriendNumber';
 
 export default function MainConmponent(props){
+   
     return (
         <div>
           
@@ -22,7 +24,7 @@ export default function MainConmponent(props){
                 </div>
                 <div className='col-9'>
                 <div className='row'>
-                <ChildrenNumber number={props.data}/>
+                <ChildrenNumber number={person.children.length}/>
                 {person.children.map(child=>{
                    
                 return <ChildrenCards
@@ -34,9 +36,7 @@ export default function MainConmponent(props){
                         />
                 })}
                 <div className='row mt-4'>
-                <div className='bg-danger ms-4 me-5'style={{ height: '3rem' ,width:"1100px"}}>
-                <p className='text-white fs-3 text-start ms-2'>Friend</p>
-                </div>
+                <FriendNumber number={person.friends.length}/>
                 {person.friends.map(friend=>{
                             return <Friends
                             fname={friend.firstName}
