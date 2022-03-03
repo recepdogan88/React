@@ -61,5 +61,32 @@
       {"answerText":"accept","isCorrect":true},
       {"answerText":"cut","isCorrect":false}
     ]
+},
+{
+  "question":"Sicherheit",
+  "options":[
+    {"answerText":"return","isCorrect":false},
+    {"answerText":"supply","isCorrect":false},
+    {"answerText":"assurance","isCorrect":true},
+    {"answerText":"restrain","isCorrect":false}
+  ]
+},
+{
+  "question":"Subtil",
+  "options":[
+    {"answerText":"excellent","isCorrect":false},
+    {"answerText":"magnificient","isCorrect":false},
+    {"answerText":"diffierent","isCorrect":false},
+    {"answerText":"subtle","isCorrect":true}
+  ]
+},
+{
+  "question":"sensibel",
+  "options":[
+    {"answerText":"sensibel","isCorrect":false},
+    {"answerText":"logic","isCorrect":false},
+    {"answerText":"glumsy","isCorrect":false},
+    {"answerText":"sensetive","isCorrect":true}
+  ]
 }
 ]

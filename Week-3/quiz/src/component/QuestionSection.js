@@ -3,7 +3,7 @@ import { useState } from 'react'
 import NextQuestion from './NextQuestion'
 
 function QuestionSection(props) {
-   const RandomNumber=Math.floor(Math.random() * 4)//datanin icinde random gezmek icin olusturlacak questionNr state ne baslangic degeri
+   const RandomNumber=Math.floor(Math.random() * 9)//datanin icinde random gezmek icin olusturlacak questionNr state ne baslangic degeri
    const newdata=props.question //props ile alinan data her seferinde uzun yazilmamasi icin degiskene atandi.
    const [questionNr,setquestionNr]=useState(RandomNumber)
    const[Correctscore,setCorrectScore]=useState(0)//dogru cevap verildiginde skoru artirmak icin olusturulan state
@@ -30,11 +30,15 @@ function CorrectButton(PisCorrect){
          setquestionNr={setquestionNr}
          color={color}
          setColor={setColor}
+         Correctscore={Correctscore}
+         setCorrectScore={setCorrectScore}
+         Falsescore={Falsescore}
+         setFalsescore={setFalsescore}
          />
         <div className='row mt-5 d.flex flex-row'>
         <div className='fs-2 text-center border bg-primary pt-4' style={{width:200, height: 100,}}>{newdata[questionNr].question}</div>
         {newdata[questionNr].options.map((ask,index)=>(//datanin icinde random gezilerek cevap secenkelri yazdirildi.
-        <button key={index} type="button" className={color} style={{width:200, height: 100,color:"green"}} onClick={()=>CorrectButton(ask.isCorrect)} >{ask.answerText}</button>
+        <button key={index} type="button" className={ask.isCorrect ?"btn btn-warning ms-2 fs-2 text-green":"btn btn-warning ms-2 fs-2 text-danger"} style={{width:200, height: 100,color:"green"}} onClick={()=>CorrectButton(ask.isCorrect)} >{ask.answerText}</button>
     ))}
         </div>
         <div className='row mt-5'>

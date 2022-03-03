@@ -7,19 +7,24 @@ function NextQuestion(props) {
   const color=props.color
   const settColor=props.setColor
   const [QuestionNumber,setQuestionNumber]=useState(1)//next butonuna basildiginda kacinci soruda olundugunu gostermesi icin olusturulan state
-
+  const correct =props.Correctscore
+  const falsee =props.Falsescore
+  const settCorrecet=props.setCorrectScore
+  const settfalsee=props.setFalsescore
 
 function Next(){//next butonuna uygulanan onclick hem dizinin icinde random gezilecek sayi degistirldi hemde kacinci soruda oldugunu gosteren state degistirildi
   //4 soruluk bi quiz olmasi icin 4.sorudan sonra alert ile quiz bitirilip state ler guncellendi.
   settColor("btn btn-warning ms-2 fs-2 text-dark")
   setQuestionNumber(QuestionNumber+1)
-  settquestionNr(Math.floor(Math.random() * 7))
+  settquestionNr(Math.floor(Math.random() * 9))
     if(settquestionNr>data.length){
-        settquestionNr(Math.floor(Math.random() * 4))
+        settquestionNr(Math.floor(Math.random() * 9))
     }
-    if(QuestionNumber>4){
+    if(QuestionNumber>3){
         alert("GAME OVER QUIZE BASLAMAK ICIN SAYFAYI YENILEYINIZ")
         setQuestionNumber(1)
+        settCorrecet(0)
+        settfalsee(0)
     }
    
     
