@@ -1,0 +1,92 @@
+[
+    {
+        "question":"Der Adler",
+        "options":[
+          {"answerText":"Eagle","isCorrect":true},
+          {"answerText":"Giraffe","isCorrect":false},
+          {"answerText":"Dog","isCorrect":false},
+          {"answerText":"Cat","isCorrect":false}
+        ]
+    },
+    {
+        "question":"Der Stuhl",
+        "options":[
+          {"answerText":"Sofa","isCorrect":false},
+          {"answerText":"Carpet","isCorrect":false},
+          {"answerText":"Chair","isCorrect":true},
+          {"answerText":"Mirror","isCorrect":false}
+        ]
+    },
+    {
+        "question":"Das Sofa",
+        "options":[
+          {"answerText":"Closet","isCorrect":false},
+          {"answerText":"Table","isCorrect":false},
+          {"answerText":"Pillow","isCorrect":false},
+          {"answerText":"Sofa","isCorrect":true}
+        ]
+    },
+    {
+        "question":"schreiben",
+        "options":[
+          {"answerText":"speak","isCorrect":false},
+          {"answerText":"talk","isCorrect":false},
+          {"answerText":"write","isCorrect":true},
+          {"answerText":"walk","isCorrect":false}
+        ]
+    },
+    {
+        "question":"umgeben",
+        "options":[
+          {"answerText":"encircle","isCorrect":true},
+          {"answerText":"warn","isCorrect":false},
+          {"answerText":"overlook","isCorrect":false},
+          {"answerText":"sanction","isCorrect":false}
+        ]
+    },
+    {
+      "question":"Bringen",
+      "options":[
+        {"answerText":"bring","isCorrect":true},
+        {"answerText":"impose","isCorrect":false},
+        {"answerText":"dictate","isCorrect":false},
+        {"answerText":"put","isCorrect":false}
+      ]
+  },
+  {
+    "question":"acceptieren",
+    "options":[
+      {"answerText":"collapse","isCorrect":false},
+      {"answerText":"apply","isCorrect":false},
+      {"answerText":"accept","isCorrect":true},
+      {"answerText":"cut","isCorrect":false}
+    ]
+},
+{
+  "question":"Sicherheit",
+  "options":[
+    {"answerText":"return","isCorrect":false},
+    {"answerText":"supply","isCorrect":false},
+    {"answerText":"assurance","isCorrect":true},
+    {"answerText":"restrain","isCorrect":false}
+  ]
+},
+{
+  "question":"Subtil",
+  "options":[
+    {"answerText":"excellent","isCorrect":false},
+    {"answerText":"magnificient","isCorrect":false},
+    {"answerText":"diffierent","isCorrect":false},
+    {"answerText":"subtle","isCorrect":true}
+  ]
+},
+{
+  "question":"sensibel",
+  "options":[
+    {"answerText":"sensibel","isCorrect":false},
+    {"answerText":"logic","isCorrect":false},
+    {"answerText":"glumsy","isCorrect":false},
+    {"answerText":"sensetive","isCorrect":true}
+  ]
+}
+]
