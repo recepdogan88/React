@@ -1,6 +1,6 @@
 import './App.css';
 import AddPerson from "./component/AddPerson";
-import PersonList from "./component/PersonList";
+
 import React, { useState } from "react";
 /*
 -Inputtan alinacak verilerin duzenlecegi ve eklencegi addperson componenti olusturuldu.
@@ -11,24 +11,23 @@ import React, { useState } from "react";
 -Props methodu ile app.js de olusturulan bu fonksiyon inputtn verilerin alindigi addperson componentine gonderildi.
 -Veriler alindiktan sonra listeleme yaprak inputun altinda yazdirma islemi yapilacak personlist componenti olusturuldu.
 -Bu componente app.js de olustuurlan personlist props ile gonderildi.
--V ebu componentin icinde gelen liste yadirildi.
+-Addperson componentinin icinde validation yapildiktan sonra veriler objeye atildi.
+-Ve ebu componentin icinde gelen liste yadirildi.
 */
 
 
 
 function App() {
 
-  const [personList,setPersonList]=useState([])
   
-  //addperson componentinin icinde alinan veri objeye atildiktan objenin  yukarudaki state atilacagi fonksiyon.
-  function addPerson (pNewPerson){
-    setPersonList([...personList,pNewPerson])
-  }
+  
+  
+  
 
   return (
     <div className="App ms-5 mt-5 col-3">
-      <AddPerson addPerson={addPerson} />
-      <PersonList personList={personList} />
+      <AddPerson  />
+      
     </div>
      
   );

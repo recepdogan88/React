@@ -1,26 +1,18 @@
 
 
-export default function PersonList({personList}) {
+export default function PersonList(props) {
 
-   const renderperson=personList.map((person,index)=>(
-       <div key={index} >
-            <p>Username : {person.userName}</p>
-            <p>Email : {person.mail}</p>
-            <p>Password : {person.password}</p>
-       </div>
-      
-   ))
-    
+  const {user,email,pass}=props
 
   return (
+    
     <div className="mt-5">
-     { renderperson}
+     
+      <div>
+      <p>Username : {user}</p>
+      <p>Email : {email}</p>
+      <p>Password : {pass}</p>
+      </div>
     </div>
   )
 }
-/*
-
-
-
-
-*/
