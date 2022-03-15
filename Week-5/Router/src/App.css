@@ -1,0 +1,18 @@
+.header{
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  background-color: rgb(79, 79, 206);
+  align-items: center;
+}
+li{
+  font-size: 3rem;
+  margin-right: 3rem;
+  list-style-type:none;
+  
+  
+}
+.Link{
+  color: aliceblue;
+  text-decoration:none
+}
