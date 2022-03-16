@@ -30,7 +30,7 @@ export default function Form({PersonList,setPersonList}) {
     }
 
   return (
-    <div className='col-4 mt-5'>
+    <div className='col-3 mt-5 ms-5 me-5'>
         <div className='bg-primary fs-2 text-center text-white p-1'>ADD PERSON</div>
         <form className='mt-4'onSubmit={postData}>
             <div class="mb-3">
