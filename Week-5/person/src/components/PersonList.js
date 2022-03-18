@@ -1,8 +1,8 @@
 import React from 'react'
 
 
-export default function PersonList({PersonList}) {
- 
+export default function PersonList({PersonList,setPersonList,getdata}) {
+
  
   return (
     <>
@@ -26,6 +26,7 @@ export default function PersonList({PersonList}) {
                   <td>{person.email}</td>
                   <td>{person.password}</td>
                   <td>{person.about}</td>
+                  
               </tr>
       ))}
   </tbody>

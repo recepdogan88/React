@@ -31,6 +31,30 @@
       "password": "recep",
       "about": "besiktas",
       "id": 4
+    },
+    {
+      "firstName": "mahmut",
+      "lastName": "yilmaz",
+      "email": "mahmut@gmail.com",
+      "password": "1234",
+      "about": "BJK",
+      "id": 5
+    },
+    {
+      "firstName": "Pascal",
+      "lastName": "Nouma",
+      "email": "pascal@gmail.com",
+      "password": "1111",
+      "about": ".....",
+      "id": 6
+    },
+    {
+      "firstName": "Pascal",
+      "lastName": "Nouma",
+      "email": "pascal@gmail.com",
+      "password": "1111",
+      "about": ".....",
+      "id": 7
     }
   ]
 }

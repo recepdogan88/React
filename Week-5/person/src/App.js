@@ -16,7 +16,7 @@ function App() {
     const data =await response.json()
     setPersonList(data)
   }
-  console.log(PersonListe)
+  
 
   return (
     <div className="App">
@@ -25,7 +25,11 @@ function App() {
       PersonList={PersonListe}
       setPersonList={setPersonList}
       />
-      <PersonList PersonList={PersonListe}/>
+      <PersonList 
+      PersonList={PersonListe}
+      setPersonList={setPersonList}
+      getdata={getdata}
+      />
       </div>
       
     </div>
