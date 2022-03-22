@@ -3,8 +3,15 @@ import React from 'react'
 import {useState} from 'react'
 
 export default function PersonList({PersonList,setPersonList,form,setform,getdata}) {
-const [userid,setuserid]=useState()
+const [userid,setuserid]=useState(2)
 const [edited,setedited]=useState(false)
+const [editform,seteditform]=useState({
+  name:"",
+  lastname:"",
+  email:"",
+  password:"",
+  comment:""
+})
 const [current,setcurrent]=useState({
   name:"",
   lastname:"",
@@ -15,20 +22,21 @@ const [current,setcurrent]=useState({
 
 
 async function update(e){
-  setedited(false)
-  setcurrent({
-    name:item.firstName,
-    lastname:item.lastName,
-    email:item.email,
-    password:item.password,
-    comment:item.comment
+ seteditform({
+    name:current.name,
+    lastname:current.lastname,
+    email:current.email,
+    password:current.password,
+    comment:current.comment,
+    id:current.id
   })
   
+  setedited(false)
   e.preventDefault();
   console.log(current)
-  await fetch(`http://localhost:3002/employee/`, {
+  await fetch(`http://localhost:3002/employee/${userid}`, {
       method: 'PUT',
-      body:JSON.stringify(current)
+      body:JSON.stringify(editform)
     }).then((result) => {
       result.json().then((resp) => {
         console.warn(resp)
@@ -40,11 +48,13 @@ async function update(e){
 
 
 function selectedPerson(id){
+  let newid=id
+  setuserid(newid)
+  console.log(userid)
   setedited(true)
-  setuserid(id)
   console.log(id)
   let item=PersonList.find(person =>person.id==id)
-  console.log(item)
+  setuserid(item.id)
   setcurrent({
     name:item.firstName,
     lastname:item.lastName,
