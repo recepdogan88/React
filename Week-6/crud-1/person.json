@@ -1,0 +1,28 @@
+{
+  "employee": [
+    {
+      "id": 1,
+      "firstName": "John",
+      "lastName": "Meier",
+      "email": "john@hicoders.ch",
+      "password": "s34ret",
+      "about": "me about me"
+    },
+    {
+      "firstName": "Ugur",
+      "lastName": "Sadik",
+      "email": "rdogan8891@gmail.com",
+      "password": "22qq",
+      "about": "aaaa",
+      "id": 10
+    },
+    {
+      "firstName": "Recep",
+      "lastName": "dOGAN",
+      "email": "rdogan8891@gmail.com",
+      "password": "aa",
+      "about": "aa",
+      "id": 11
+    }
+  ]
+}

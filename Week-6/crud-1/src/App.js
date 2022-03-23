@@ -4,8 +4,17 @@ import PersonList from './components/PersonList';
 import Form from './components/Form';
 
 function App() {
+  const [form,setform]=useState({
+    name:"",
+    lastname:"",
+    email:"",
+    password:"",
+    comment:""
+  }
+  )
+ 
 
-  const [PersonListe,setPersonList]=useState([])
+const [PersonListe,setPersonList]=useState([])
 
   useEffect(() => {
     getdata()
@@ -24,8 +33,12 @@ function App() {
       <Form 
       PersonList={PersonListe}
       setPersonList={setPersonList}
+      form={form}
+      setform={setform}
       />
       <PersonList 
+      form={form}
+      setform={setform}
       PersonList={PersonListe}
       setPersonList={setPersonList}
       getdata={getdata}
