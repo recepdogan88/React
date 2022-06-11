@@ -16,7 +16,6 @@ import Footer from './components/footer';
 function App() {
   return (
     <>
-
       <Navbar/>
     <div class="row">
       <Cards/>
