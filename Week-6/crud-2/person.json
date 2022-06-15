@@ -31,14 +31,6 @@
       "password": "12345",
       "about": "saghagshahgshag",
       "id": 4
-    },
-    {
-      "firstName": "Kadir",
-      "lastName": "Calik",
-      "email": "rdogan8891@gmail.com",
-      "password": "1234",
-      "about": "besiktas",
-      "id": 5
     }
   ]
 }

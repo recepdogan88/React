@@ -8,14 +8,15 @@ import { useState,useEffect } from 'react'
 function App() {
   const [PersonListe,setPersonList]=useState([])
   useEffect(() => {
-    getdata()
-  },[]);
+    getdata() 
+  },[PersonListe]);
 
   async function getdata(){
     const response =await fetch('http://localhost:3002/employee')
-    const data =await response.json()
+    const data =await  response.json()
     setPersonList(data)
   }
+  
   return (
     <BrowserRouter>
       <Routes>

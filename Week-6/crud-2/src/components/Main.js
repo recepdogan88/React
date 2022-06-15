@@ -1,7 +1,7 @@
 import React from 'react'
 import Form from './Form'
 import PersonList from './PersonList'
-import { useState,useEffect } from 'react'
+import { useState } from 'react'
 
 export default function Main({PersonListe,setPersonList,getdata}) {
     const [form,setform]=useState({

@@ -19,7 +19,9 @@ const [current,setcurrent]=useState({
   password:"",
   comment:""
 })
-
+useEffect(() => {
+  update()
+},[]);
 
 async function update(e){
  seteditform({

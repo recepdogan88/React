@@ -1,9 +1,9 @@
 import {Link} from "react-router-dom"
 import React from 'react'
 import {useState} from 'react'
-import { getDefaultNormalizer } from "@testing-library/react"
 
-export default function PersonList({PersonListe,setPersonList,form,setform,getdata}) {
+
+export default function PersonList({PersonListe,setPersonList}) {
 
 const [userid,setuserid]=useState(2)
 const [edited,setedited]=useState(false)
@@ -23,7 +23,7 @@ const [current,setcurrent]=useState({
 })
 
 
-async function update(e){
+async function update(e, id){
  seteditform({
     name:current.name,
     lastname:current.lastname,
@@ -35,7 +35,7 @@ async function update(e){
   setedited(false)
   e.preventDefault();
   console.log(current)
-  await fetch(`http://localhost:3002/employee/${userid}`, {
+  await fetch(`http://localhost:3002/employee/${id}`, {
       method: 'PUT',
       body:JSON.stringify(editform)
     }).then((result) => {
@@ -53,6 +53,8 @@ function selectedPerson(id){
   setedited(true)
   console.log(id)
   let item=PersonList.find(person =>person.id==id)
+  console.log(item)
+  setcurrent({name:item.name})
   setuserid(item.id)
   setcurrent({
     name:item.firstName,
@@ -112,7 +114,6 @@ async function deletePerson(Pid){
   </tbody>
 </table>
     </div>
-     
     </>
   )
 }
